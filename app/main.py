@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from .routers import upload
+from .routers import qna   
 
 app = FastAPI(title="ResearchLens API", version="0.1.0")
 app.include_router(upload.router)
+
+app.include_router(qna.router)  
